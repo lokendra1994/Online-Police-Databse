@@ -1,0 +1,29 @@
+<HTML>
+<head>
+<script>
+function AddRecord() 
+{
+var adoConn = new ActiveXObject("ADODB.Connection");
+var adoRS = new ActiveXObject("ADODB.Recordset");
+adoConn.Open("Provider=microsoft.ace.oledb.12.0;Data Source='C:\\Users\\111249\\Documents\\Lokendra1.accdb'");
+adoRS.Open("Select * From Table2", adoConn, 1, 2);
+if(!adoRS.bof) {
+adoRS.MoveFirst();
+if(!adoRS.eof) {
+document.write("<p><br>" + adoRS.fields(5).value + ", ");
+
+}
+}
+else {
+document.write("No data found");
+};
+adoRS.Close();
+adoConn.Close();
+}
+
+</script>
+</head>
+<body>
+<input type="button" value="sub" onclick="AddRecord()">
+</body>
+</html>

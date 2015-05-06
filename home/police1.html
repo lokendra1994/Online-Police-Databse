@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Police Form</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".cal").hide();
+				$(".but").click(function(){
+					$(".cal").show();
+				});
+			});
+		function upperCase(){
+			var x=document.getElementById("fname");
+			x.value=x.value.toUpperCase();
+			var y=document.getElementById("fathername");
+			y.value=y.value.toUpperCase();
+			var z1=document.getElementById("add1");
+			z1.value=z1.value.toUpperCase();
+			var z2=document.getElementById("add2");
+			z2.value=z2.value.toUpperCase();
+			var z3=document.getElementById("add3");
+			z3.value=z3.value.toUpperCase();
+			var z4=document.getElementById("add4");
+			z4.value=z4.value.toUpperCase();
+			
+		}
+		function myFunction(x){
+			x.style.background="#e9e9e9";
+		}
+		
+		function Add(){
+		$("#tbl thead").append(
+        "<tr>"+
+        "<td><input type='text' id='schoolname' class='detail' name='schoolname' value='' size='20' onfocus='myFunction(this)'/></td>"+
+        "<td><input type='text' id='schoolname' class='detail' name='schoolname' value='' size='20' onfocus='myFunction(this)'/></td>"+
+        "</tr>");
+		var x = document.getElementById("row3").style.height;
+		x = x+"30px";
+        }
+		
+
+
+
+		</script>
+		<style>
+			body{
+				background-color:#e9e9e9;
+			}
+			#formwrap{
+				width:45%;
+				padding:30px;
+				background-color:#ffffff;
+				margin-left:25%;
+				border-radius:10px;
+			}
+			.input {
+				float:left;
+				padding-left:10px;
+			}
+			.row {
+				height:20px;
+				dispay:block;
+				padding:10px;
+				border-bottom:1px dotted #999;
+			}
+			.row1{
+				border-bottom:1px dotted #999;
+			}
+			.row3 {
+				height:50px;
+				dispay:block;
+				padding:10px;
+				//
+			}
+			.label {
+				width:170px;
+				text-align:left;
+				float:left;
+				padding-left:15px
+				padding-right:15px;
+				
+			}
+
+			button{
+				height:21px;
+				padding-left:10px;
+				margin-top:0px;
+			}
+			#x{
+				margin-left:100px;
+			}
+			table{
+				margin-left:175px;
+				}
+			span {
+				color:red;
+			}	
+			#add {
+				margin-left:88%;
+			}
+			.next{
+				margin-left:43%;
+				border-radius:4px;
+				color:blue;
+			}
+			input{
+				border-radius:2px;
+			}
+			legend{
+				font-size:16pt;
+				color:blue;
+				margin-left:3%;
+				margin-right:3%;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="formwrap">
+			<div id="form">
+				<form>
+				<fieldset>
+					<legend>Academic Information:</legend>
+					<div class="row">
+						<div class="label">State <span>*</span></div><!--End .label-->
+						<div class="input"><select name="abc" onfocus="myFunction(this)"><option>------Select State ------</option><option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option>
+						<option>Chhatisgarh</option><option>Goa</option><option>Gujrat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jammu & Kashmir</option><option>Jharkhand</option>
+						<option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option><option>Mizoram</option>
+						<option>Nagaland</option><option>Odisha</option><option>West Bengal</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option>
+						<option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option></select></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Employee Category <span>*</span></div><!--End .label-->
+						<div class="input"><select name="abc" onfocus="myFunction(this)"><option>----Select Category----</option><option>IPS Officer</option><option>SPS Offficer</option></select></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Designation <span>*</span></div><!--End .label-->
+						<div class="input"><select name="abc" onfocus="myFunction(this)"><option>--Select Designation--</option><option>IPS Officer</option><option>SPS Offficer</option></select></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">District <span>*</span></div><!--End .label-->
+						<div class="input"><select name="abc" onfocus="myFunction(this)"><option>-----Select District -----</option><option>IPS Officer</option><option>SPS Offficer</option></select></div><!--End .input-->
+					</div><!--End .row-->
+
+					
+					<div class="row">
+						<div class="label">Allotment Year <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="fname" class="detail" name="fname" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+				
+					<div class="row">
+						<div class="label">Source Of Recruinment <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="no" class="detail" value="" size="20" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row1-->
+					
+					<div class="row">
+						<div class="label">Appointment Date <span>*</span></div><!--End .label-->
+						<div class="input"><input type="date" id="fname" class="detail" size="1" name="fname" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+						</div><!--End .row1-->
+					
+					<div class="row">
+						<div class="label">Date Since Holding <span>*</span></div><!--End .label-->
+						<div class="input"><input type="date" id="fname" class="detail" size="1" name="fname" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+						</div><!--End .row1-->
+					
+					<div class="row">
+						<div class="label">Street <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">City <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Postal Code <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+
+					
+					<input type="button" class="next" value="Submit"/>
+				</fieldset>
+				</form><!--End form-->
+			
+			</div><!--End #form-->
+
+		</div><!--End #formwrap-->
+		
+		</body>
+	</html>

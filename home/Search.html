@@ -1,0 +1,196 @@
+<html>
+	<head>
+		<title>Police Form</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			
+		function upperCase(){
+			var x=document.getElementById("fname");
+			x.value=x.value.toUpperCase();
+			var y=document.getElementById("fathername");
+			y.value=y.value.toUpperCase();
+			var z1=document.getElementById("add1");
+			z1.value=z1.value.toUpperCase();
+			var z2=document.getElementById("add2");
+			z2.value=z2.value.toUpperCase();
+			var z3=document.getElementById("add3");
+			z3.value=z3.value.toUpperCase();
+			var z4=document.getElementById("add4");
+			z4.value=z4.value.toUpperCase();
+			
+		}
+		
+		
+
+
+
+		</script>
+		<style>
+			body{
+				background-color:#e9e9e9;
+			}
+			#formwrap{
+				width:90%;
+				padding:30px;
+				background-color:#ffffff;
+				margin-left:3%;
+				border-radius:10px;
+			}
+			.input {
+				float:left;
+				padding-left:10px;
+			}
+			.row {
+				height:20px;
+				dispay:block;
+				padding:10px;
+				border-bottom:1px dotted #999;
+				float:left;
+			}
+			.row1{
+				border-bottom:1px dotted #999;
+			}
+			.row3 {
+				height:50px;
+				dispay:block;
+				padding:10px;
+			}
+			form{
+				text-align:center;
+			}
+			.label {
+				width:170px;
+				text-align:left;
+				float:left;
+				padding-left:15px;
+				padding-right:15px;
+				
+			}
+
+			button{
+				height:21px;
+				padding-left:10px;
+				margin-top:0px;
+			}
+			#x{
+				margin-left:100px;
+			}
+			table{
+				margin-left:175px;
+				}
+			span {
+				color:red;
+			}	
+			#add {
+				margin-left:88%;
+			}
+			.next{
+				margin-top:2%;
+				margin-left:35%;
+				border-radius:4px;
+				color:blue;
+				float:left;
+			}
+			.next1{
+				margin-top:2%;
+				margin-left:5%;
+				border-radius:4px;
+				color:blue;
+				float:left;
+			}
+			
+			input{
+				border-radius:2px;
+				/*border-color:pink;*/
+			}
+			legend{
+				font-size:16pt;
+				color:blue;
+				margin-left:3%;
+				margin-right:3%;
+			}
+			#search{
+				width:90%;
+				padding:30px;
+				background-color:#ffffff;
+				margin-left:3%;
+				border-radius:10px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="menu">
+			
+		</div>
+		<div id="formwrap">
+			<div id="form">
+				<form>
+				<fieldset>
+					<legend>Search Information:</legend>
+					<div class="row">
+						<div class="label">Employee Category <span>*</span></div><!--End .label-->
+						<div class="input"><select name="emp" onfocus="myFunction(this)"><option>----Select Category----</option><option>IPS Officer</option><option>SPS Offficer</option></select></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Designation <span>*</span></div><!--End .label-->
+						<div class="input"><select name="des" onfocus="myFunction(this)"><option>--Select Designation--</option><option>IPS Officer</option><option>SPS Offficer</option></select></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">State <span>*</span></div><!--End .label-->
+						<div class="input"><select name="state" onfocus="myFunction(this)"><option>------Select State ------</option><option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option>
+						<option>Chhatisgarh</option><option>Goa</option><option>Gujrat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jammu & Kashmir</option><option>Jharkhand</option>
+						<option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option><option>Mizoram</option>
+						<option>Nagaland</option><option>Odisha</option><option>West Bengal</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option>
+						<option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option></select></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">District <span>*</span></div><!--End .label-->
+						<div class="input"><select name="dis" onfocus="myFunction(this)"><option>-----Select District -----</option><option>IPS Officer</option><option>SPS Offficer</option></select></div><!--End .input-->
+					</div><!--End .row-->
+
+					<div class="row">
+						<div class="label">Allotment Year <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="fname" class="detail" name="all" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+				
+					<div class="row">
+						<div class="label">First Name <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="fname" class="detail" name="fname" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Last Name <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="lname" class="detail" name="lname" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Place Of Posting <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="city" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Source Of Recruinment <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" name="source" id="no" class="detail" value="" size="20" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row1-->
+					
+					<input type="submit" class="next" value="Search"/>
+					<input type="reset" class="next1" value="Reset"/>
+				</fieldset>
+				</form><!--End form-->
+			
+			</div><!--End #form-->
+
+		</div><!--End #formwrap-->
+		<div id="search">
+		<form>
+			<fieldset>
+			<legend>Search Result</legend>
+			</fieldset>
+		</form>
+		</div><!--End Search-->
+		</body>
+	</html>

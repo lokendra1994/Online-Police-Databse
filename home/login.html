@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Login</title>
+<style>
+body{
+	background-color:rgb(247,247,247);
+}
+#LOGIN{
+	padding-left:10%;
+	width:30%;
+	margin-left:30%;
+	height:60%;
+	padding-top:10%;
+	padding-bottom:10%;
+	margin-top:-13px;
+	background-color:rgba(207,207,207,0.4);
+}
+#IMG{
+	padding-left:69%;
+	height:20px;
+	width:20px;
+}
+</style>
+<script src="acordian1.js"></script>
+<script src="acordian.js"></script>
+<script>
+$(document).ready(function(){
+	$("#CHECK").hide();
+	$("#CLICK").click(function(){
+	$("#CHECK").show(500);
+	$("body").css("background-color","rgba(227,227,227,0.7)");
+	});
+	$("#IMG").click(function(){
+	$("#CHECK").hide(500);
+	$("body").css("background-color","rgb(247,247,247)");
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="CLICK">
+<input type="button" value="Login" style="margin-left:47%"/></div>
+<div id="CHECK">
+<div id="IMG">
+<img src="2.jpg" height="20px" width="20px"/>
+</div>
+<div id="LOGIN">
+Username : <input type="text" /></br>
+Password : <input type="password" />
+</div>
+</div>
+</body>
+</html>

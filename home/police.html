@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Police Form</title>
+		<style>
+			body{
+				background-color:#e9e9e9;
+			}
+			#formwrap{
+				width:45%;
+				padding:30px;
+				background-color:#ffffff;
+				margin-left:25%;
+				border-radius:10px;
+			}
+			.input {
+				float:left;
+				padding-left:10px;
+			}
+			.row {
+				height:20px;
+				dispay:block;
+				padding:10px;
+				border-bottom:1px dotted #999;
+			}
+			.row1{
+				border-bottom:1px dotted #999;
+			}
+			.row3 {
+				height:50px;
+				dispay:block;
+				padding:10px;
+				//
+			}
+			.label {
+				width:170px;
+				text-align:left;
+				float:left;
+				padding-left:15px
+				padding-right:15px;
+				
+			}
+			input{
+				border-radius:2px;
+			}
+			button{
+				height:21px;
+				padding-left:10px;
+				margin-top:0px;
+			}
+			#x{
+				margin-left:100px;
+			}
+			table{
+				margin-left:175px;
+				}
+			span {
+				color:red;
+			}	
+			#add {
+				margin-left:88%;
+				border-radius:4px;
+				color:blue;
+			}
+			.next{
+				margin-left:43%;
+				border-radius:4px;
+				color:blue;
+			}
+			legend{
+				font-size:16pt;
+				color:blue;
+				margin-left:3%;
+				margin-right:3%;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="formwrap">
+			<div id="form">
+				<form>
+				<fieldset>
+					<legend>Personal Information:</legend>
+					<div class="row">
+						<div class="label">First Name <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="fname" class="detail" name="fname" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Last Name <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="lname" class="detail" name="lname" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Sex <span>*</span></div><!--End .label-->
+						<div class="input"><input type="radio" name ="male" value="Male">Male
+											<input type="radio" name="female" value="Female">Female </div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">DOB <span>*</span></div><!--End .label-->
+						<div class="input"><input type="date" id="fname" class="detail" size="1" name="dob" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+						</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Home No <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="no" name="hno" class="detail" value="" size="20" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row1-->
+					
+					<div class="row">
+						<div class="label">Office No <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="no" class="detail" name="ono" value="" size="20" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row1-->
+					
+					<div class="row">
+						<div class="label">Contact No <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="no" class="detail" name="ono" value="" size="20" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row1-->
+					
+					<div class="row">
+						<div class="label">Email Id <span>*</span></div><!--End .label-->
+						<div class="input"><input type="email" id="email" class="detail" size="20" name="email" value="" onfocus="myFunction(this)"/></div><!--End .input-->
+						</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Street <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">City <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">District <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">State <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Postal Code <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+
+					<div class="row3" id="row3">
+						<div class="label">Qualification <span>*</span></div><!--End .label-->
+						<table id="tbl">
+						<thead>
+							<tr>
+								<td><input type="text" id="schoolname" class="detail" name="schoolname" value="" size="20" onfocus="myFunction(this)"/></td>
+								<td><input type="text" id="schoolname" class="detail" name="schoolname" value="" size="20" onfocus="myFunction(this)"/></td>	
+							</tr>
+						</thead>
+						</table>
+						<input type="button" id="add" onclick="Add()" value="Add More"/>
+					</div><!--End .row3-->
+					<div class="row1"></div>
+					<input type="button" class="next" value="Next >>"/>
+				</fieldset>
+				</form><!--End form-->
+			
+			</div><!--End #form-->
+
+		</div><!--End #formwrap-->
+		
+		</body>
+	</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Police Form</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+			
+		function upperCase(){
+			var x=document.getElementById("fname");
+			x.value=x.value.toUpperCase();
+			var y=document.getElementById("fathername");
+			y.value=y.value.toUpperCase();
+			var z1=document.getElementById("add1");
+			z1.value=z1.value.toUpperCase();
+			var z2=document.getElementById("add2");
+			z2.value=z2.value.toUpperCase();
+			var z3=document.getElementById("add3");
+			z3.value=z3.value.toUpperCase();
+			var z4=document.getElementById("add4");
+			z4.value=z4.value.toUpperCase();
+			
+		}
+		</script>
+		<style>
+			body{
+				background-image:url('ab.jpg');
+				background-repeat:repeat;
+				background-attachment:fixed;
+				
+				//background-color:#e9e9e9;
+			}
+			#formwrap{
+				width:45%;
+				padding:30px;
+				background-color:rgba(205,205,205,0.8);
+				margin-left:25%;
+				border-radius:10px;
+                                border: 2px solid rgba(255,255,255,0.5);
+			}
+			.input {
+				float:left;
+				padding-left:10px;
+			}
+			.row {
+				height:20px;
+				dispay:block;
+				padding:10px;
+				border-bottom:1px dotted #999;
+			}
+			.row1{
+				display:block;
+				padding:2%;
+				float:left;
+				margin-left:10%;
+			}
+			.row2{
+				margin-left:3%;
+			}
+			.label {
+				width:170px;
+				text-align:left;
+				float:left;
+				padding-left:15px;
+				padding-right:15px;
+				
+			}
+			input{
+				border-radius:2px;
+			}
+			span {
+				color:red;
+			}
+			.next{
+				margin-top:2%;
+				margin-left:35%;
+				border-radius:4px;
+				color:blue;
+				float:left;
+			}
+			.next1{
+				margin-top:2%;
+				margin-left:5%;
+				border-radius:4px;
+				color:blue;
+			}
+			legend{
+				font-size:16pt;
+				color:blue;
+				margin-left:3%;
+				margin-right:3%;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="formwrap">
+		<div id="form2">
+				<form method ="POST" action="\WebApplication1\SignUp">
+				<fieldset>
+					<legend>Sign Up:</legend>
+					<div class="row">
+						<div class="label">User Id <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="fname" class="detail" name="p_id" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">First Name <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="fname" class="detail" name="fname" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Last Name <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="fname" class="detail" name="lname" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Sex <span>*</span></div><!--End .label-->
+						<div class="input"><input type="radio" name ="male" value="Male">Male
+											<input type="radio" name="male" value="Female">Female </div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Date Of Birth <span>*</span></div><!--End .label-->
+						<div class="input"><input type="date" id="fname" class="detail" name="email" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Contact No. <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="fname" class="detail" name="cno" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					
+					<div class="row">
+						<div class="label">Email Id <span>*</span></div><!--End .label-->
+						<div class="input"><input type="email" id="fname" class="detail" name="email" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Street <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">City <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">District <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">State <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Postal Code <span>*</span></div><!--End .label-->
+						<div class="input"><input type="text" id="add1" class="detail" name="add1" value="" size="20" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Password <span>*</span></div><!--End .label-->
+						<div class="input"><input type="password" id="fname" class="detail" name="pass" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					<div class="row">
+						<div class="label">Confirm Password <span>*</span></div><!--End .label-->
+						<div class="input"><input type="password" id="fname" class="detail" name="pass1" value="" onchange="upperCase()" onfocus="myFunction(this)"/></div><!--End .input-->
+					</div><!--End .row-->
+					
+					
+					<input type="submit" class="next" value="Submit"/>
+					<input type="reset" class="next1" value="Reset"/> 
+				</fieldset>
+				</form><!--End form-->
+			
+			</div><!--End #form-->
+
+		</div><!--End #formwrap-->
+		
+		</body>
+	</html>

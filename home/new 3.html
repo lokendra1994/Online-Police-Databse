@@ -1,0 +1,228 @@
+<%-- 
+    Document   : Home1
+    Created on : Sep 11, 2013, 9:49:39 AM
+    Author     : BiNGo
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<HTML>
+<style>
+    body {
+	color: rgb(6, 106, 217);
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-size: 100%;
+	background: #F4F6F8;
+	padding: 0 0 0 0;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	-o-perspective: 1000px;
+	perspective: 1000px; /* <-NB */
+}
+
+/* Container box to set the sides relative to */
+.cube {
+	width: 25%;
+	text-align: center;
+	margin: 20px 50px;
+	/*margin-left:5%;*/
+	height: 100px;
+	float:left;
+
+	-webkit-transition: -webkit-transform .33s;
+	-moz-transition: -moz-transform .33s;
+	-o-transition: -moz-transform .33s;
+	transition: transform .33s; /* Animate the transform properties */
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d; /* <-NB */
+}
+
+/* The two faces of the cube */
+.flippety,.flop {
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189, .8);
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+	-moz-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+	-o-box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+	box-shadow: 0 5px 20px rgba(105, 108, 109, .3), 0 0 8px 5px rgba(208, 223, 226, .4) inset;
+	height: 100px;
+}
+
+/* Position the faces */
+.flippety {
+	-webkit-transform: translateZ(50px);
+	-moz-transform: translateZ(50px);
+	-o-transform: translateZ(50px);
+	transform: translateZ(50px);
+	line-height: 40px;
+}
+
+.flop {
+	/*background-image:url('1.jpg');*/
+	background-size: 100% 100px;
+	-webkit-transform: rotateX(-90deg) translateZ(-50px);
+	-moz-transform: rotateX(-90deg) translateZ(-50px);
+	-o-transform: rotateX(-90deg) translateZ(-50px);
+	transform: rotateX(-90deg) translateZ(-50px);
+	line-height: 13px;
+	font-size:9pt;
+}
+
+/* Rotate the cube */
+.cube:hover {
+	-webkit-transform: rotateX(89deg);
+	-moz-transform: rotateX(89deg);
+	-o-transform: rotateX(89deg);
+	transform: rotateX(89deg); /* Text bleed at 90º */
+}
+
+#left {
+	margin-top:70px;
+	
+}
+
+#right {
+	margin-left:50%;
+}
+a{
+	text-decoration:none;
+	color: rgb(6, 106, 117);
+}
+#xy{
+	background-color:#f4f6f8;
+	width:15%;
+	margin-top:0%;
+	margin-left:80%;
+	margin-top:-10%;
+	float:left;
+	text-align:center;
+	
+}
+img{
+	margin-left:2%;
+	float:left;
+}
+</style>
+
+</head>
+<body>
+<div id="img">
+<img src="1.png" height="150px" width="150px"/>
+</div>
+<div id="xy">
+<p><a href="Login.jsp">Login</a></p>
+</div>
+<br/>
+
+<a href="#">
+  <div class="cube">
+	<div class="flippety">
+	<h2>Indian Panel Code</h2>
+	</div>
+	<div class="flop">
+	<a href=""><h3>Indian Panel Code</h3></a>
+	<p>Indian Penal Code is the main criminal code of India. It is a comprehensive code, intended to cover all substantive aspects of criminal law.</p>
+	
+	</div>
+  </div></a>
+  
+  <a href="#">
+  <div class="cube">
+	<div class="flippety">
+	<h2>Code Of Criminal Procedure</h2>
+	</div>
+	<div class="flop">
+	<a href=""><h3>Code Of Criminal Procedure<h3/></a>
+	<p>The Code of Criminal Procedure is the main legislation on procedure for administration of substantive criminal law in India.</p>
+	
+	</div>
+  </div></a>
+  
+  <a href="#">
+  <div class="cube">
+	<div class="flippety">
+	<h2>Evidence Act</h2>
+	</div>
+	<div class="flop">
+	<a href=""><h3>Evidence Act</h3></a>
+	<p>Evidence Act contains a set of rules and allied issues governing admissibility of evidence in the Indian courts of law.</p>
+	</div>
+  </div></a>
+  
+  <a href="#">
+  <div class="cube">
+	<div class="flippety">
+	<h2>Minor Act</h2>
+	</div>
+	<div class="flop">
+	<a href=""><h3>Minor Act</h3></a>
+	<p></p>
+	</div>
+  </div></a>
+  
+  <a href="#">
+  <div class="cube">
+	<div class="flippety">
+	<h2>Police Regulation</h2>
+	</div>
+	<div class="flop">
+	<a href=""><h3>Police Regulation</h3></a>
+	<p></p>
+	</div>
+  </div></a>
+  
+  <a href="#">
+  <div class="cube">
+	<div class="flippety">
+	<h2>States</h2>
+	</div>
+	<div class="flop">
+	<a href="India.jsp"><h3>States</h3></a>
+	<p></p>
+	</div>
+  </div></a>
+  
+  <a href="#">
+  <div class="cube">
+	<div class="flippety">
+	<h2>Post</h2>
+	</div>
+	<div class="flop">
+	<a href=""><h3>Post</h3></a>
+	<p></p>
+	</div>
+  </div></a>
+  
+  <a href="#">
+  <div class="cube">
+	<div class="flippety">
+	<h2>Branches</h2>
+	</div>
+	<div class="flop">
+	<a href=""><h3>Branches</h3></a>
+	<p></p>
+	</div>
+  </div></a>
+  
+	<a href="#">
+  <div class="cube">
+	<div class="flippety">
+	<h2>Database</h2>
+	</div>
+	<div class="flop">
+	<a href=""><h3>Database</h3></a>
+	<p></p>
+	</div>
+  </div></a>
+  
+</body>
+</HTML>
