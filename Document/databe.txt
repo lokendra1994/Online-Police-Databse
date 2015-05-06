@@ -1,0 +1,76 @@
+drop database registration;
+create database registration;
+use registration;
+create table ppolice(
+p_id varchar(8) primary key,
+fname varchar(12) not null,
+lname varchar(8) not null,
+sex varchar(6) not null,
+dob date,
+hno bigint(15),
+ono bigint(15) not null,
+cno bigint(15),
+email varchar(40) not null,
+street varchar(20) not null,
+city varchar(20) not null,
+district varchar(20) not null,
+state varchar(17) not null,
+postal int(6) not null,
+pass varchar(10) not null,
+pass1 varchar(10) not null
+);
+
+create table qualification(
+police_id varchar(8) primary key,
+q1 varchar(8) not null,
+q1_dep varchar(10) not null,
+q2 varchar(8),
+q2_dep varchar(10),
+q3 varchar(8),
+q3_dep varchar(10),
+q4 varchar(8),
+q4_dep varchar(10),
+foreign key (police_id) REFERENCES ppolice(p_id)
+);
+
+create table apolice(
+p_id varchar(8) primary key,
+foreign key (p_id) REFERENCES ppolice(p_id),
+state varchar(17) not null,
+emp varchar(20) not null,
+des varchar(20) not null,
+source varchar(20) not null,
+dis varchar(20) not null,
+app date not null,
+hold date not null,
+street varchar(20) not null,
+city varchar(20) not null,
+postal int(6) not null
+);
+	
+create table state(
+id integer(2) primary key auto_increment,
+name varchar(17)
+);
+
+create table district(
+id integer(3) primary key auto_increment,
+name varchar(20)
+);
+
+create table sd(
+s_id integer(2),
+d_id integer(3),
+foreign key (s_id) REFERENCES state(id),
+foreign key (d_id) REFERENCES district(id)
+);
+
+create table one(
+uid varchar(8) primary key,
+que varchar(30),
+ans varchar(30),
+foreign key (uid) REFERENCES ppolice(p_id)
+);
+
+
+

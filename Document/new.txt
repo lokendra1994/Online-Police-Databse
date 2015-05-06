@@ -1,0 +1,22 @@
+create table state(
+id integer(2) primary key auto_increment,
+name varchar(17)
+);
+
+create table district(
+id integer(3) primary key auto_increment,
+name varchar(20)
+);
+
+create table sd(
+s_id integer(2),
+d_id integer(3),
+foreign key (s_id) REFERENCES state(id),
+foreign key (d_id) REFERENCES district(id)
+);
+
+insert into state values(1,"Andhra Pradesh");
+
+insert into district values(1,"dholpur");
+
+insert into sd values (1,1);
