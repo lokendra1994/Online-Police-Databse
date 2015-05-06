@@ -1,0 +1,49 @@
+body { 
+	background-image:url('bg.jpg');
+	background-repeat:repeat;
+	background-attachment:fixed;
+}
+
+#a{
+	background-image:url('bg1.jpg');
+	background-repeat:repeat;
+	background-attachment:fixed;
+	height: 1400px;
+	width: 70%;
+	margin: 5% 15% 5% 14%;
+	border: 5px solid #332A24;
+}
+
+#b{
+	margin-left:5%;
+	margin-top:5%;
+	margin-right:5%;
+	margin-bottom:5%;
+}
+
+#header h1{
+		color:#612E00;
+}
+		
+#header1 p{
+		font-size:13pt;
+		text-align:justify;
+		letter-spacing:1.5px
+}
+
+#header1 h4{
+		text-align:right;
+}
+
+#menu{
+		float: left;
+}
+
+#menu1{
+		float:left;
+		width:680px;
+}
+
+td a{
+	text-decoration:none;
+}
